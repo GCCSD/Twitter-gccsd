@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Twitts do GCCSD!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="gcct.css" />
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	    var twitt = '';
+	    function atualiza() {
+		$.getJSON("http://search.twitter.com/search.json?q=%23gccsd&limit=20&show_user=true&callback=?",
+		    function(data) {
+			$("#twitts").empty();
+			$.each(data.results, function(i, item) {
+			    twitt = '<tr><td><img src="' + item.profile_image_url + '" /></td>';
+			    twitt += '<td><a href="http://twitter.com/' + item.from_user + '" target="_blank">@' + item.from_user + '</a></td>';
+			    twitt += '<td class="twitt">' + item.text +'</td>';
+			    twitt += '</tr>';
+			    $("#twitts").append(twitt);
+			});
+		    });
+	    }
+
+	    $(document).ready( function() {
+		atualiza();
+		$("#recarregar").click( function() {
+		    atualiza();
+		});
+	    });
+	</script>
+    </head>
+    <body>
+        <div id="main">
+	    <div class="boxtop"><div></div></div>
+	    <div class="boxcontent">
+		<div style="float: right;"><input type="button" id="recarregar" value="Recarregar"></div>
+		<h1>Twitts do GCCSD!</h1>
+		<table id="twitts">
+
+		</table>
+	    </div>
+	    <div class="boxbottom"><div></div></div>
+        </div>
+        <div id="footer">
+	    <div class="boxtop"><div></div></div>
+	    <div class="boxcontent">
+		<p>Estes são os Twitts feitos usando a Hashtag #gccsd!</p>
+		<p>Desenvolvido por <a href="http://twitter.com/InFog9">@InFog9</a> durante o encontro do GCCSD.</p>
+	    </div>
+	    <div class="boxbottom"><div></div></div>
+        </div>
+    </body>
+</html>
