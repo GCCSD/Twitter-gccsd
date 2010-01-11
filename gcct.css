@@ -1,61 +1,61 @@
 body
 {
-	padding: 0px;
-	margin: 0px;
-	background-color: #C0DEED;
-	font-family: "verdana", sans-serif;
-	font-size: 12px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #C0DEED;
+    font-family: "verdana", sans-serif;
+    font-size: 12px;
 }
 
 #main
 {
-	padding: 0px;
-	margin: 20px auto;
-	width: 800px;
-	background-color: #DDEEF6;
+    padding: 0px;
+    margin: 20px auto;
+    width: 800px;
+    background-color: #DDEEF6;
 }
 
 #footer
 {
-	padding: 0px;
-	margin: 10px auto;
-	width: 800px;
-	background-color: #DDEEF6;
-	font-size: 80%;
-	text-align: center;
+    padding: 0px;
+    margin: 10px auto;
+    width: 800px;
+    background-color: #DDEEF6;
+    font-size: 80%;
+    text-align: center;
 }
 
 .user
 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .twitt
 {
-	border: 3px solid #C0DEED;
-	margin: 5px 0px;
+    border: 3px solid #C0DEED;
+    margin: 5px 0px;
 }
 
 .boxtop {
-  background: url(ne.gif) no-repeat top right;
+    background: url(ne.gif) no-repeat top right;
 }
 
 .boxtop div {
-  font-size: 0;
-  height: 10px;
-  background: url(nw.gif) no-repeat top left;
+    font-size: 0;
+    height: 10px;
+    background: url(nw.gif) no-repeat top left;
 }
 
 .boxbottom {
-  background: url(se.gif) no-repeat bottom right;
+    background: url(se.gif) no-repeat bottom right;
 }
 
 .boxbottom div {
-  font-size: 0;
-  height: 10px;
-  background: url(sw.gif) no-repeat bottom left;
+    font-size: 0;
+    height: 10px;
+    background: url(sw.gif) no-repeat bottom left;
 }
 
 .boxcontent {
-  padding: 0px 10px;
+    padding: 0px 10px;
 }
