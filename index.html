@@ -13,8 +13,9 @@
 			$("#twitts").empty();
 			$.each(data.results, function(i, item) {
 			    created_at = new Date(item.created_at);
+			    source = item.source.replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&quot;/g,'"');
 			    twitt = '<tr><td><img src="' + item.profile_image_url + '" /></td>';
-			    twitt += '<td><a href="http://twitter.com/' + item.from_user + '" target="_blank">@' + item.from_user + '</a><br />' + created_at.getDate() + '/' + (created_at.getMonth()+1) + '/' + created_at.getFullYear() + ' as ' + created_at.getHours() + ':' + created_at.getMinutes() + '<br />Via: ' + item.source + '</td>';
+			    twitt += '<td><a href="http://twitter.com/' + item.from_user + '" target="_blank">@' + item.from_user + '</a><br />' + created_at.getDate() + '/' + (created_at.getMonth()+1) + '/' + created_at.getFullYear() + ' as ' + created_at.getHours() + ':' + created_at.getMinutes() + '<br />Via: ' + source + '</td>';
 			    twitt += '<td class="twitt">' + item.text +'</td>';
 			    twitt += '</tr>';
 			    $("#twitts").append(twitt);
