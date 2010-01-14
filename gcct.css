@@ -59,3 +59,15 @@ body
 .boxcontent {
     padding: 0px 10px;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.twit_link, .twit_link:visited {
+    text-decoration: none;
+    font-size: 120%;
+    color: black;
+    font-weight: bold;
+}

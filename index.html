@@ -15,10 +15,17 @@
 			    var created_at = new Date(item.created_at);
 			    var today = new Date();
 			    /* TODO date difference */
-			    var date_diff = today - created_at;
+			    var date_diff = today.getTime() - created_at.getTime();
+			    date_diff = ((date_diff / 1000) / 60);
+			    if (date_diff < 60)
+				date_string = Math.round(date_diff) + " minutos atrás";
+			    else if ((date_diff / 60) < 24)
+				date_string = Math.round(date_diff / 60) + " horas atrás";
+			    else
+				date_string = Math.round((date_diff/60)/24) + " dias atrás";
 			    source = item.source.replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&quot;/g,'"');
 			    twitt = '<tr><td><img src="' + item.profile_image_url + '" /></td>';
-			    twitt += '<td class="twitt"><a href="http://twitter.com/' + item.from_user + '" target="_blank">@' + item.from_user + '</a> (' + created_at.getDate() + '/' + (created_at.getMonth()+1) + '/' + created_at.getFullYear() + ' as ' + created_at.getHours() + ':' + created_at.getMinutes() + ' Via: ' + source + ')<br /><br />';
+			    twitt += '<td class="twitt"><a class="twit_link" href="http://twitter.com/' + item.from_user + '" target="_blank">@' + item.from_user + '</a> (' + date_string + ' Via: ' + source + ')<br /><br />';
 			    twitt += '' + item.text +'</td>';
 			    twitt += '</tr>';
 			    $("#twitts").append(twitt);
