@@ -30,10 +30,16 @@ body
     font-weight: bold;
 }
 
+.tdtwitt
+{
+    width: 100%;
+}
+
 .twitt
 {
-    border: 3px solid #C0DEED;
-    margin: 5px 0px;
+    background-color: #C0DEED;
+    width: 100%;
+    margin: 10px 0px;
 }
 
 .boxtop {
