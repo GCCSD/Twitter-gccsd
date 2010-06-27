@@ -5,6 +5,8 @@ body
     background-color: #C0DEED;
     font-family: "verdana", sans-serif;
     font-size: 12px;
+    background-image: url(images/twitter_logo.png);
+    background-repeat: no-repeat;
 }
 
 #main
