@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title>Twitts do GCCSD!</title>
+        <title>Tweets do GCCSD!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="gcct.css" />
 	<script type="text/javascript" src="jquery.js"></script>
@@ -25,9 +25,9 @@
 				date_string = Math.round((date_diff/60)/24) + " dias atrás";
 			    source = item.source.replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&quot;/g,'"');
 			    twitt = '<tr><td><img src="' + item.profile_image_url + '" /></td>';
-			    twitt += '<td class="pretwitt"></td>'
-			    twitt += '<td class="tdtwitt"><div class="twitt"><a class="twit_link" href="http://twitter.com/' + item.from_user + '" target="_blank">@' + item.from_user + '</a> (' + date_string + ' Via: ' + source + ')<br /><br />';
-			    twitt += '' + item.text +'</div></td>';
+			    twitt += '<td><div class="pretwitt">i</div></td>'
+			    twitt += '<td class="tdtwitt"><div class="twitt"><div class="inboxtop"><div></div></div><a class="twit_link" href="http://twitter.com/' + item.from_user + '" target="_blank">@' + item.from_user + '</a> (' + date_string + ' Via: ' + source + ')<br /><br />';
+			    twitt += '' + item.text +'<div class="inboxbottom"><div></div></div></div></td>';
 			    twitt += '</tr>';
 			    $("#twitts").append(twitt);
 			});
@@ -47,7 +47,7 @@
 	    <div class="boxtop"><div></div></div>
 	    <div class="boxcontent">
 		<div style="float: right;"><input type="button" id="recarregar" value="Recarregar"></div>
-		<h1>Twitts do GCCSD!</h1>
+		<h1>Tweets com a hashtag #gccsd</h1>
 		<table id="twitts">
 
 		</table>
@@ -57,7 +57,7 @@
         <div id="footer">
 	    <div class="boxtop"><div></div></div>
 	    <div class="boxcontent">
-		<p>Estes são os Twitts feitos usando a Hashtag #gccsd!</p>
+		<p>Estes são os Twitts feitos usando a Hashtag #gccsd.</p>
 		<p>Desenvolvido por <a href="http://twitter.com/InFog9">@InFog9</a>.</p>
 	    </div>
 	    <div class="boxbottom"><div></div></div>

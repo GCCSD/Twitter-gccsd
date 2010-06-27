@@ -35,6 +35,12 @@ body
     width: 100%;
 }
 
+.pretwitt
+{
+    background-image: url(images/baloon.png) no-repeat top left;
+    width: 10px;
+}
+
 .twitt
 {
     background-color: #C0DEED;
@@ -43,23 +49,43 @@ body
 }
 
 .boxtop {
-    background: url(ne.gif) no-repeat top right;
+    background: url(images/ne.gif) no-repeat top right;
 }
 
 .boxtop div {
     font-size: 0;
     height: 10px;
-    background: url(nw.gif) no-repeat top left;
+    background: url(images/nw.gif) no-repeat top left;
 }
 
 .boxbottom {
-    background: url(se.gif) no-repeat bottom right;
+    background: url(images/se.gif) no-repeat bottom right;
 }
 
 .boxbottom div {
     font-size: 0;
     height: 10px;
-    background: url(sw.gif) no-repeat bottom left;
+    background: url(images/sw.gif) no-repeat bottom left;
+}
+
+.inboxtop {
+    background: url(images/in-ne.gif) no-repeat top right;
+}
+
+.inboxtop div {
+    font-size: 0;
+    height: 10px;
+    background: url(images/in-nw.gif) no-repeat top left;
+}
+
+.inboxbottom {
+    background: url(images/in-se.gif) no-repeat bottom right;
+}
+
+.inboxbottom div {
+    font-size: 0;
+    height: 10px;
+    background: url(images/in-sw.gif) no-repeat bottom left;
 }
 
 .boxcontent {
